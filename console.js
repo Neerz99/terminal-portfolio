@@ -5,6 +5,7 @@ terminalInput.addEventListener("keydown", function (event) {
         document.getElementById("submitHidden").click(); // Trigger the hidden submit button
         helpCommand()
         aboutCommand()
+        linksCommand()
         clearInput()
     }
 });
@@ -28,5 +29,11 @@ function helpCommand() {
 function aboutCommand() {
     if (terminalInput.value == 'about') {
         terminalOutput.innerHTML += "<br><p>I am Enzo ILO, passionate web developer from France. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore unde, laudantium deleniti beatae et cupiditate nihil voluptatum exercitationem rem rerum quis, esse aspernatur incidunt. Commodi repellendus nihil quam sapiente labore.</p><br><p>about</p>"
+    }
+}
+
+function linksCommand() {
+    if (terminalInput.value == 'links') {
+        terminalOutput.innerHTML += "<br><p>Github: <a href='https://www.github.com/Neerz99' target='_blank'><u>github.com/Neerz99</u></a></p><p>Linkedin: <a href='linkedin.com'><u>linkedin.com</u></a></p><br><p>links</p>"
     }
 }

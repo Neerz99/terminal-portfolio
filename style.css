@@ -25,7 +25,11 @@ body {
 }
 
 .projects-link {
-    color: #ff0080;
+    color: #ff006f;
+}
+
+.help-span {
+    color: #ffffff;
 }
 
 .terminal-prompt {
