@@ -2,6 +2,7 @@ let terminalInput = document.getElementById("terminalInput");
 terminalInput.addEventListener("keydown", function (event) {
     if (event.key === 'Enter') { // Enter key
         event.preventDefault(); // Prevent form submission
+        history()
         document.getElementById("submitHidden").click(); // Trigger the hidden submit button
         helpCommand()
         aboutCommand()
@@ -12,7 +13,23 @@ terminalInput.addEventListener("keydown", function (event) {
 
 let terminalOutput = document.getElementById("terminalOutput");
 
-let helpList = ['help', 'clear', 'about', 'contact', 'projects', 'skills', 'education', 'experience', 'resume', 'github', 'linkedin', 'email', 'phone']
+let commandHistory = [];
+
+// only goes back to the latest command for now !!!
+terminalInput.addEventListener("keydown", function (event) {
+    if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        terminalInput.value = commandHistory[commandHistory.length - 1]
+
+    }
+});
+
+function history() {
+    commandHistory.push(terminalInput.value)
+    console.log(commandHistory)
+}
+
+let helpList = ['help', 'clear', 'about', 'contact', 'projects', 'skills', 'education', 'experience', 'resume', 'github', 'linkedin', 'email', 'phone'];
 
 function clearInput() {
     terminalInput.value = "";
