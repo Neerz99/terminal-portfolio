@@ -4,7 +4,6 @@ let commandHistory = [];
 let currentIndex = 0;
 let helpList = ['help', 'clear', 'about', 'contact', 'projects', 'skills', 'education', 'experience', 'resume', 'github', 'linkedin', 'email', 'phone', 'links'];
 
-
 terminalInput.addEventListener("keydown", function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
@@ -13,9 +12,11 @@ terminalInput.addEventListener("keydown", function (event) {
         helpCommand();
         aboutCommand();
         linksCommand();
+        skillsCommand();
         unknownCommand();
         clearCommand();
         clearInput();
+
     } else if (event.key === 'ArrowUp') {
         event.preventDefault();
         if (currentIndex > 0) {
@@ -72,7 +73,7 @@ function clearCommand() {
 
 function aboutCommand() {
     if (terminalInput.value == 'about') {
-        terminalOutput.innerHTML += "<br><p>I am Enzo ILO, passionate web developer from France. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore unde, laudantium deleniti beatae et cupiditate nihil voluptatum exercitationem rem rerum quis, esse aspernatur incidunt. Commodi repellendus nihil quam sapiente labore.</p><br><pre>########## ###    #### ######### ########          ########### ########## ######## </pre><pre> #+#        #+#   #+#+#  #+#     #+#    #+#             #+#     #+#       #+#    #+#     </pre><pre>  +#+        +#+  +#+#+#   +#+    +#+    +#+             +#+     +#+       +#+    +#+    </pre><pre></pre   +#++:++#   +#+ +:+ +#+    +#+   +#+    +:+             +#+     +#+       +#+    +:+   ><pre>    +:+:+      :+:+:+  +:+     +:+  +:+    +:+             +:+     +:+       +:+    +:+  </pre><pre>     :+:        :+:+:   :+:      :+: :+:    :+:             :+:     :+:       :+:    :+: </pre><pre>      :::::::::: ::::    ::: ::::::::: ::::::::          ::::::::::: :::        :::::::: </pre><br><p>About:</p>"
+        terminalOutput.innerHTML += "<br><br><p>Description: I'm a web developer who loves turning concepts into sleek, functional websites. I specialize in creating seamless designs and robust backend solutions. Let's work together to elevate your online presence!</p><p>Location: Paris, France</p><p>DoB: 22/05/01</p><p>Full Name: Enzo ILO</p><br><pre>########## ###    #### ######### ########          ########### ########## ######## </pre><pre> #+#        #+#   #+#+#  #+#     #+#    #+#             #+#     #+#       #+#    #+#     </pre><pre>  +#+        +#+  +#+#+#   +#+    +#+    +#+             +#+     +#+       +#+    +#+    </pre><pre></pre   +#++:++#   +#+ +:+ +#+    +#+   +#+    +:+             +#+     +#+       +#+    +:+   ><pre>    +:+:+      :+:+:+  +:+     +:+  +:+    +:+             +:+     +:+       +:+    +:+  </pre><pre>     :+:        :+:+:   :+:      :+: :+:    :+:             :+:     :+:       :+:    :+: </pre><pre>      :::::::::: ::::    ::: ::::::::: ::::::::          ::::::::::: :::        :::::::: </pre><br><p>About:</p>"
     }
 }
 
@@ -82,3 +83,8 @@ function linksCommand() {
     }
 }
 
+function skillsCommand() {
+    if (terminalInput.value == 'skills') {
+        terminalOutput.innerHTML += "<br><br><pre>HTML:         [===================·]     PHP:          [============········]</pre><pre>CSS:          [==================··]     MySQL:        [===============·····]</pre><pre>English:      [=================···]     JavaScript:   [=================···]</pre><pre>French:       [====================]     React:        [===============·····]</pre><br><p>Skills:</p>"
+    }
+}
