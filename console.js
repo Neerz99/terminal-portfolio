@@ -13,6 +13,7 @@ terminalInput.addEventListener("keydown", function (event) {
         aboutCommand();
         linksCommand();
         skillsCommand();
+        githubCommand();
         unknownCommand();
         clearCommand();
         clearInput();
@@ -85,6 +86,18 @@ function linksCommand() {
 
 function skillsCommand() {
     if (terminalInput.value == 'skills') {
-        terminalOutput.innerHTML += "<br><br><pre>HTML:         [===================·]     PHP:          [============········]</pre><pre>CSS:          [==================··]     MySQL:        [===============·····]</pre><pre>English:      [=================···]     JavaScript:   [=================···]</pre><pre>French:       [====================]     React:        [===============·····]</pre><br><p>Skills:</p>"
+        terminalOutput.innerHTML += "<br><br><pre>CSS:          [==================··]     MySQL:        [===============·····]</pre><pre>HTML:         [===================·]     PHP:          [============········]</pre><pre>English:      [=================···]     JavaScript:   [=================···]</pre><pre>French:       [====================]     React:        [===============·····]</pre><br><p>Skills:</p>"
+    }
+}
+
+function githubCommand() {
+    if (terminalInput.value == 'github') {
+        terminalOutput.innerHTML += "<br><br><p>Github: <a href='https://www.github.com/Neerz99' target='_blank'><u>github.com/Neerz99</u></a></p>"
+    }
+}
+
+function playlistCommand() {
+    if (terminalInput.value == 'playlist') {
+        terminalOutput.innerHTML += "<br><br><p>This functionality is still under developement, please come check it out later!</p>"
     }
 }
