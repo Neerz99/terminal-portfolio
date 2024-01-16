@@ -1,5 +1,6 @@
 let terminalInput = document.getElementById("terminalInput");
 let terminalOutput = document.getElementById("terminalOutput");
+let terminalButton = document.getElementById("top-right-button");
 let commandHistory = [];
 let currentIndex = 0;
 let helpList = ['help', 'clear', 'about', 'contact', 'projects', 'skills', 'education', 'experience', 'resume', 'github', 'linkedin', 'email', 'phone', 'links'];
@@ -36,13 +37,15 @@ terminalInput.addEventListener("keydown", function (event) {
     }
 });
 
+
+//create a function toggleTerminal that moves the terminal to the left to diseapear
+//and display the originql portfolio instead
+
 // Adds the command to the command history
 function history() {
     commandHistory.push(terminalInput.value);
     currentIndex = commandHistory.length;
 }
-
-
 
 // Clears the input field after submitting
 function clearInput() {
@@ -93,11 +96,5 @@ function skillsCommand() {
 function githubCommand() {
     if (terminalInput.value == 'github') {
         terminalOutput.innerHTML += "<br><br><p>Github: <a href='https://www.github.com/Neerz99' target='_blank'><u>github.com/Neerz99</u></a></p>"
-    }
-}
-
-function playlistCommand() {
-    if (terminalInput.value == 'playlist') {
-        terminalOutput.innerHTML += "<br><br><p>This functionality is still under developement, please come check it out later!</p>"
     }
 }

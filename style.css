@@ -52,3 +52,16 @@ body {
     display: flex;
     flex-direction: column-reverse;
 }
+
+/*to be displayed on the top right with margin*/
+.top-right-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: greenyellow;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin: 1rem;
+}
