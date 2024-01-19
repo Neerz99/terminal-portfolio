@@ -14,6 +14,7 @@ terminalInput.addEventListener("keydown", function (event) {
         aboutCommand();
         linksCommand();
         skillsCommand();
+        contactCommand();
         githubCommand();
         unknownCommand();
         clearCommand();
@@ -37,9 +38,6 @@ terminalInput.addEventListener("keydown", function (event) {
     }
 });
 
-
-//create a function toggleTerminal that moves the terminal to the left to diseapear
-//and display the originql portfolio instead
 
 // Adds the command to the command history
 function history() {
@@ -96,5 +94,11 @@ function skillsCommand() {
 function githubCommand() {
     if (terminalInput.value == 'github') {
         terminalOutput.innerHTML += "<br><br><p>Github: <a href='https://www.github.com/Neerz99' target='_blank'><u>github.com/Neerz99</u></a></p>"
+    }
+}
+
+function contactCommand() {
+    if (terminalInput.value == 'contact') {
+        terminalOutput.innerHTML += "<br><br><p>Phone: 06.XX.XX.XX.XX</p><p>Email: <a href='mailto:contact@contact.com'>contact@contact.com</p>"
     }
 }
